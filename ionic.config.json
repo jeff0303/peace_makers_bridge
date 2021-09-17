@@ -1,0 +1,7 @@
+{
+  "name": "peace_makers_bridge",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
