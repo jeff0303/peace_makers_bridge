@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+  },
+  {
+    path: 'campaign',
+    loadChildren: () => import('./campaign/campaign.module').then( m => m.CampaignPageModule)
+  },
+  {
+    path: 'participation',
+    loadChildren: () => import('./participation/participation.module').then( m => m.ParticipationPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  },
 ];
 
 @NgModule({

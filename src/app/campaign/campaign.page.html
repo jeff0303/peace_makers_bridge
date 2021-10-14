@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>campaign</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none" class="ion-margin">
+
+    <div id="area">
+      <div id="video" class="container1"></div>
+    </div>
+
+    <ion-item>
+      <ion-label position="stacked">1번 영상 수정하기</ion-label>
+      <ion-textarea type="text" [(ngModel)]="campaign1"></ion-textarea>
+    </ion-item>
+
+    <div id="area">
+      <div id="video" class="container2"></div>
+    </div>
+    <ion-item>
+      <ion-label position="stacked">2번 영상 수정하기</ion-label>
+      <ion-textarea type="text" [(ngModel)]="campaign2"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none" class="ion-margin">
+    <ion-item>
+      <ion-label position="stacked">1번 제목 수정하기</ion-label>
+      <ion-textarea [(ngModel)]="campaign3"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">1번 내용 수정하기</ion-label>
+      <ion-textarea type="text" [(ngModel)]="campaign4"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none" class="ion-margin">
+    <ion-item>
+      <ion-label position="stacked">2번 제목 수정하기</ion-label>
+      <ion-textarea type="text" [(ngModel)]="campaign5"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">2번 내용 수정하기</ion-label>
+      <ion-textarea type="text" [(ngModel)]="campaign6"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-text class="ion-text-center">
+    <p>{{error_msg}}</p>
+  </ion-text>
+
+  <ion-button expand="block" shape="round" color="success" (click)="moveToChange()">
+    수정하기
+  </ion-button>
+</ion-content>
