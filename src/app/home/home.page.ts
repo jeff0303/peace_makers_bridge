@@ -11,9 +11,8 @@ import { IamportCordova } from '@ionic-native/iamport-cordova';
 })
 export class HomePage {
 
-  constructor(
-    private router: Router,
-  ) {}
+  constructor( private router: Router, ) {
+  }
 
   async ngOnInit() {}
 
@@ -29,8 +28,7 @@ export class HomePage {
     this.router.navigate(['participation'])
   }
 
-  // async moveToUser() {
-  //   this.router.navigate(['user'])
-  // }
-  
+  async moveToUser() {
+    this.router.navigate(['user'])
+  }
 }

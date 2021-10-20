@@ -16,7 +16,22 @@
   <ion-item button (click)="moveToParticipation()">
     <ion-label>4번 페이지 수정하기</ion-label>
   </ion-item>
-  <ion-item button value="인쇄하기" id="print" onclick="window.print()">
+  <ion-item button (click)="moveToUser()">
+    <ion-label>user 정보 확인하기</ion-label>
+  </ion-item>
+  <!-- <ion-item button value="인쇄하기" id="print" onclick="window.print()">
     <ion-label>화면 프린트 테스트</ion-label>
   </ion-item>
+
+  <ion-input type="file" id="image" accept="image/*" onchange="setThumbnail(event);"></ion-input>
+  <div id="image_container"></div>
+
+
+  <ion-input type="file" id="real-input" class="image_inputType_file" accept="img/*" required multiple></ion-input>
+  <ion-item button (click)="moveToUpload()" type="file" id="real-input" class="image_inputType_file" accept="img/*" required multiple>
+    <ion-label>업로드하기</ion-label>
+  </ion-item>
+
+  <input type="file" id="real-input" class="image_inputType_file" accept="img/*" required multiple>
+  <button class="browse-btn">사진업로드</botton> -->
 </ion-content>
