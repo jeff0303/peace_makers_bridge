@@ -1,0 +1,36 @@
+#area {
+  position: relative; /* absolute는 부모가 relative일 때 부모를 따라간다. */
+  width: 95%;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+  margin-top: 2.5%;
+}
+
+#video {
+  position: absolute;
+  width: 100%; /* 부모에 맞게 꽉 채운다. */
+  height: 100%;
+}
+
+.container {
+  width: 900px;
+}
+
+.my-label {
+  font-size: 2em;
+}
+
+ion-button {
+  margin-left: 10%;
+  margin-bottom: 20px;
+  width: 80%;
+  height: 60px;
+  font-size: 2em;
+}
+
+ion-textarea {
+  font-size: 20px;
+}
+
+ion-item {
+  border-bottom: 1px solid black;
+}

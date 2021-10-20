@@ -1,22 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      관리 페이지
-    </ion-title>
+    <ion-title> 관리 페이지 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-item button (click)="moveTomain()">
-    <ion-label>1번 페이지 수정하기</ion-label>
+    <ion-label class="my-label">1번 페이지 수정하기</ion-label>
   </ion-item>
   <ion-item button (click)="moveToCampaign()">
-    <ion-label>2번 페이지 수정하기</ion-label>
+    <ion-label class="my-label">2번 페이지 수정하기</ion-label>
   </ion-item>
   <ion-item button (click)="moveToParticipation()">
-    <ion-label>4번 페이지 수정하기</ion-label>
+    <ion-label class="my-label">4번 페이지 수정하기</ion-label>
   </ion-item>
   <ion-item button value="인쇄하기" id="print" onclick="window.print()">
-    <ion-label>화면 프린트 테스트</ion-label>
+    <ion-label class="my-label">화면 프린트 테스트</ion-label>
   </ion-item>
 </ion-content>

@@ -6,40 +6,56 @@
 
 <ion-content>
   <ion-list lines="none" class="ion-margin">
-    <div id="area">
-      <div id="video" class="container1"></div>
+    <div class="container">
+      <div id="area">
+        <div id="video" class="container1"></div>
+      </div>
     </div>
 
     <ion-item>
-      <ion-label position="stacked">1번 영상 수정하기</ion-label>
+      <ion-label class="my-label" position="stacked"
+        >1번 영상 수정하기</ion-label
+      >
       <ion-textarea type="text" [(ngModel)]="participation1"></ion-textarea>
     </ion-item>
   </ion-list>
 
   <ion-list lines="none" class="ion-margin">
-    <div id="area">
-      <div id="video" class="container2"></div>
+    <div class="container">
+      <div id="area">
+        <div id="video" class="container2"></div>
+      </div>
     </div>
 
     <ion-item>
-      <ion-label position="stacked">2번 영상 수정하기</ion-label>
+      <ion-label class="my-label" position="stacked"
+        >2번 영상 수정하기</ion-label
+      >
       <ion-textarea type="text" [(ngModel)]="participation2"></ion-textarea>
     </ion-item>
   </ion-list>
 
   <ion-list lines="none" class="ion-margin">
-    <div id="area">
-      <div id="video" class="container3"></div>
+    <div class="container">
+      <div id="area">
+        <div id="video" class="container3"></div>
+      </div>
     </div>
 
     <ion-item>
-      <ion-label position="stacked">3번 영상 수정하기</ion-label>
+      <ion-label class="my-label" position="stacked"
+        >3번 영상 수정하기</ion-label
+      >
       <ion-textarea type="text" [(ngModel)]="participation3"></ion-textarea>
     </ion-item>
   </ion-list>
 
-  <ion-button expand="block" shape="round" color="success" (click)="moveToChange()">
+  <ion-button
+    expand="block"
+    shape="round"
+    color="success"
+    (click)="moveToChange()"
+  >
     수정하기
   </ion-button>
-
 </ion-content>
