@@ -59,10 +59,6 @@ export class ParticipationPage implements OnInit {
 
     this.router.navigate(['home'])
 
-    const toast = await this.toastController.create({
-      message: '성공적으로 완료되었습니다!',
-      duration: 2000
-    });
-    toast.present();
+    alert("정상적으로 수정되었습니다.")
   }
 }

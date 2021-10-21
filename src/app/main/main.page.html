@@ -1,17 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>1번 페이지 수정</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list lines="none" class="ion-margin">
-    <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >1번 제목 수정하기</ion-label
-      >
+    <!-- <ion-item>
+      <ion-label position="stacked">1번 제목 수정하기</ion-label>
       <ion-textarea type="text" [(ngModel)]="main1"></ion-textarea>
-    </ion-item>
+    </ion-item> -->
 
     <ion-item>
       <ion-label class="my-label" position="stacked"
@@ -22,12 +23,10 @@
   </ion-list>
 
   <ion-list lines="none" class="ion-margin">
-    <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >2번 제목 수정하기</ion-label
-      >
+    <!-- <ion-item>
+      <ion-label position="stacked">2번 제목 수정하기</ion-label>
       <ion-textarea [(ngModel)]="main3"></ion-textarea>
-    </ion-item>
+    </ion-item> -->
 
     <ion-item>
       <ion-label class="my-label" position="stacked"
@@ -37,7 +36,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-list lines="none" class="ion-margin">
+  <!-- <ion-list lines="none" class="ion-margin">
     <ion-item>
       <ion-label class="my-label" position="stacked"
         >3번 제목 수정하기</ion-label
@@ -51,7 +50,7 @@
       >
       <ion-textarea type="text" [(ngModel)]="main6"></ion-textarea>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 
   <ion-text class="ion-text-center">
     <p>{{error_msg}}</p>
