@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>campaign</ion-title>
+    <ion-title>소개 페이지 수정</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -8,7 +8,10 @@
 </ion-header>
 
 <ion-content>
+  <h1>* 영상 업로드 방법</h1>
+  <h2>* 유튜브 영상 공유 -> 퍼가기에서 코드 복사하기 -> width와 height 100%로 수정한 이후 수정하기 버튼 클릭</h2>
   <ion-list lines="none" class="ion-margin">
+    
     <div class="container">
       <div id="area">
         <div id="video" class="container1"></div>
@@ -16,9 +19,7 @@
     </div>
 
     <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >1번 영상 수정하기</ion-label
-      >
+      <ion-label class="my-label" position="stacked">1번 영상 수정하기</ion-label>
       <ion-textarea type="text" [(ngModel)]="campaign1"></ion-textarea>
     </ion-item>
 
@@ -27,56 +28,91 @@
         <div id="video" class="container2"></div>
       </div>
     </div>
+
     <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >2번 영상 수정하기</ion-label
-      >
+      <ion-label class="my-label" position="stacked">2번 영상 수정하기</ion-label>
       <ion-textarea type="text" [(ngModel)]="campaign2"></ion-textarea>
     </ion-item>
+
   </ion-list>
 
   <ion-list lines="none" class="ion-margin">
+
     <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >1번 제목 수정하기</ion-label
-      >
+      <ion-label class="my-label" position="stacked">1번 제목 수정하기</ion-label>
       <ion-textarea [(ngModel)]="campaign3"></ion-textarea>
     </ion-item>
 
     <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >1번 내용 수정하기</ion-label
-      >
+      <ion-label class="my-label" position="stacked">1번 내용 수정하기</ion-label>
       <ion-textarea type="text" [(ngModel)]="campaign4"></ion-textarea>
     </ion-item>
+
   </ion-list>
 
   <ion-list lines="none" class="ion-margin">
+
     <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >2번 제목 수정하기</ion-label
-      >
+      <ion-label class="my-label" position="stacked">2번 제목 수정하기</ion-label>
       <ion-textarea type="text" [(ngModel)]="campaign5"></ion-textarea>
     </ion-item>
 
     <ion-item>
-      <ion-label class="my-label" position="stacked"
-        >2번 내용 수정하기</ion-label
-      >
+      <ion-label class="my-label" position="stacked">2번 내용 수정하기</ion-label>
       <ion-textarea type="text" [(ngModel)]="campaign6"></ion-textarea>
     </ion-item>
+
   </ion-list>
+
+    <div>
+      <ion-input type="file" accept="image/*" [(ngModel)]="image"></ion-input>
+    </div>
+
+    <ion-list lines="none" class="ion-margin">
+
+      <ion-item>
+        <ion-label class="my-label" position="stacked">1번 FAQ 제목 수정하기</ion-label>
+        <ion-textarea type="text" [(ngModel)]="Q1"></ion-textarea>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label class="my-label" position="stacked">1번 FAQ 내용 수정하기</ion-label>
+        <ion-textarea type="text" [(ngModel)]="A1"></ion-textarea>
+      </ion-item>
+  
+    </ion-list>
+
+    <ion-list lines="none" class="ion-margin">
+
+      <ion-item>
+        <ion-label class="my-label" position="stacked">2번 FAQ 제목 수정하기</ion-label>
+        <ion-textarea type="text" [(ngModel)]="Q2"></ion-textarea>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label class="my-label" position="stacked">2번 FAQ 내용 수정하기</ion-label>
+        <ion-textarea type="text" [(ngModel)]="A2"></ion-textarea>
+      </ion-item>
+  
+    </ion-list>
+
+    <ion-list lines="none" class="ion-margin">
+
+      <ion-item>
+        <ion-label class="my-label" position="stacked">3번 FAQ 제목 수정하기</ion-label>
+        <ion-textarea type="text" [(ngModel)]="Q3"></ion-textarea>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label class="my-label" position="stacked">3번 FAQ 내용 수정하기</ion-label>
+        <ion-textarea type="text" [(ngModel)]="A3"></ion-textarea>
+      </ion-item>
+  
+    </ion-list>
 
   <ion-text class="ion-text-center">
     <p>{{error_msg}}</p>
   </ion-text>
 
-  <ion-button
-    expand="block"
-    shape="round"
-    color="success"
-    (click)="moveToChange()"
-  >
-    수정하기
-  </ion-button>
+  <ion-button expand="block" shape="round" color="success" (click)="moveToChange()"> 수정하기 </ion-button>
 </ion-content>

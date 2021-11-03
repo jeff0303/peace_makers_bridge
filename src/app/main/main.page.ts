@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
-import { getFirestore, doc, getDoc, updateDoc } from "firebase/firestore";
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-main',
@@ -25,33 +25,24 @@ export class MainPage implements OnInit {
   ) { }
 
   async ngOnInit() {
-    const db = getFirestore();
-    const docRef = doc(db, "admin", "mainpage");
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      this.main1 = docSnap.data().text1
-      this.main2 = docSnap.data().text2
-      this.main3 = docSnap.data().text3
-      this.main4 = docSnap.data().text4
-      this.main5 = docSnap.data().text5
-      this.main6 = docSnap.data().text6
-    } else {
-      // doc.data() will be undefined in this case
-      console.log("No such document!");
-    }
+    const db1 = firebase.firestore();
+
+    const result1 = db1.collection("admin").doc("mainpage")
+      .onSnapshot((doc) => {
+        this.main1 = doc.data().text1
+        this.main2 = doc.data().text2
+      })
+      console.log(result1)
   }
 
   async moveToChange() {
-    const db = getFirestore();
-    const dbupdate = doc(db, "admin", "mainpage")
+    const db2 = firebase.firestore();
 
-    const result = await updateDoc(dbupdate, {
+    const washingtonRef = db2.collection("admin").doc("mainpage");
+
+    const result = washingtonRef.update({
       text1: this.main1,
       text2: this.main2,
-      text3: this.main3,
-      text4: this.main4,
-      text5: this.main5,
-      text6: this.main6,
     });
     console.log(result)
 
@@ -59,5 +50,4 @@ export class MainPage implements OnInit {
 
     alert ("정상적으로 수정되었습니다.")
   }
-
 }

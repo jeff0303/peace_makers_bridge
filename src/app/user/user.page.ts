@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { getFirestore,collection, getDocs } from "firebase/firestore";
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-user',
@@ -12,13 +12,13 @@ export class UserPage implements OnInit {
   constructor() { }
 
   async ngOnInit() {
-    const db = getFirestore();
-    const querySnapshot = await getDocs(collection(db, "peace_makers"));
-    querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
-    });
-    console.log(querySnapshot)
+    const db = firebase.firestore();
+    
+    db.collection("peace_makers").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+      })
+    })
   }
 
 }
