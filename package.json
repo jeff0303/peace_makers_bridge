@@ -23,7 +23,7 @@
     "@ionic-native/iamport-cordova": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "angular": "^1.8.2",
-    "firebase": "^8.0.0",
+    "firebase": "^8.10.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

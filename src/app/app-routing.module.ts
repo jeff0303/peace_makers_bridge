@@ -4,35 +4,42 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
+  },
+  {
+    path: 'main',
+    loadChildren: () =>
+      import('./main/main.module').then((m) => m.MainPageModule),
+  },
+  {
+    path: 'campaign',
+    loadChildren: () =>
+      import('./campaign/campaign.module').then((m) => m.CampaignPageModule),
+  },
+  {
+    path: 'participation',
+    loadChildren: () =>
+      import('./participation/participation.module').then(
+        (m) => m.ParticipationPageModule
+      ),
+  },
+  {
+    path: 'user',
+    loadChildren: () =>
+      import('./user/user.module').then((m) => m.UserPageModule),
   },
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'main',
-    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
-  },
-  {
-    path: 'campaign',
-    loadChildren: () => import('./campaign/campaign.module').then( m => m.CampaignPageModule)
-  },
-  {
-    path: 'participation',
-    loadChildren: () => import('./participation/participation.module').then( m => m.ParticipationPageModule)
-  },
-  {
-    path: 'user',
-    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+    pathMatch: 'full',
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
